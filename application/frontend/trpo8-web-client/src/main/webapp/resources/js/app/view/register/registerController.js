@@ -22,7 +22,7 @@ define(["angular"], function (angular) {
 					console.log(data);
 					lsService.saveToken(data.accessToken);
 					lsService.saveDeviceId($scope.model.deviceId);
-					$state.go("app.main.profile");
+					$state.go("app.main.profile.details");
 				};
 
 				var errorHandler = function (error) {
@@ -44,9 +44,9 @@ define(["angular"], function (angular) {
 						$scope.model.deviceId = lsService.getDeviceId();
 						if (!$scope.model.deviceId) {
 							$scope.model.deviceId = navigator.platform
-													+ navigator.vendor
-													+ dateFormatter.formatDateValue(new Date(),
-														dateFormatterConstant.apiDateTimePattern);
+									+ navigator.vendor
+									+ dateFormatter.formatDateValue(new Date(),
+											dateFormatterConstant.apiDateTimePattern);
 						}
 
 						authService.signUp($scope.model.email, $scope.model.password, successHandler, errorHandler);
