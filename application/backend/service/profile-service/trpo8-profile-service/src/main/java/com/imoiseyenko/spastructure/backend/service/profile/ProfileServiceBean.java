@@ -90,11 +90,15 @@ public class ProfileServiceBean implements ProfileService {
 	 */
 	@Override
 	@Transactional(propagation = Propagation.REQUIRED, readOnly = false)
-	public void updateProfile (ProfileVO profileVO) throws SpastructureProfileServiceException {
+	public void updateProfile (String email, ProfileVO profileVO) throws SpastructureProfileServiceException {
 
 		try {
 
-			profileDAO.update(profileVOConverter.convertProfileVOToEntity(profileVO));
+			if (email != null && !email.isEmpty() && profileVO != null && email.equals(profileVO.getEmail())) {
+				profileDAO.update(profileVOConverter.convertProfileVOToEntity(profileVO));
+			} else {
+				throw SpastructureProfileServiceExceptionCreator.CANNOT_UPDATE_PROFILE.createException();
+			}
 		} catch (SpastructureDBRepositoryException | RuntimeException ex) {
 			throw SpastructureProfileServiceExceptionCreator.CANNOT_UPDATE_PROFILE.createException(ex);
 		}

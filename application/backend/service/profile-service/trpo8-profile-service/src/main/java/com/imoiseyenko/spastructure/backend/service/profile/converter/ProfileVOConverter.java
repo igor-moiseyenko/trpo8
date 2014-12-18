@@ -33,8 +33,8 @@ public class ProfileVOConverter {
 			profileVO = new ProfileVO();
 			profileVO.setId(profile.getId());
 			profileVO.setEmail(profile.getEmail());
-			profileVO.setFirstName(profile.getFirstName());
-			profileVO.setLastName(profile.getLastName());
+			profileVO.setFirstname(profile.getFirstname());
+			profileVO.setLastname(profile.getLastname());
 			profileVO.setAddress(profile.getAddress());
 		}
 
@@ -79,8 +79,8 @@ public class ProfileVOConverter {
 			profile = new Profile();
 			profile.setId(profileVO.getId());
 			profile.setEmail(profileVO.getEmail());
-			profile.setFirstName(profileVO.getFirstName());
-			profile.setLastName(profileVO.getLastName());
+			profile.setFirstname(profileVO.getFirstname());
+			profile.setLastname(profileVO.getLastname());
 			profile.setAddress(profileVO.getAddress());
 		}
 

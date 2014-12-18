@@ -34,11 +34,12 @@ public interface ProfileService {
 	/**
 	 * Update profile.
 	 * 
+	 * @param email
 	 * @param profileVO
 	 * @throws SpastructureProfileServiceException
 	 * @author imoiseyenko93@gmail.com
 	 */
-	public void updateProfile (ProfileVO profileVO) throws SpastructureProfileServiceException;
+	public void updateProfile (String email, ProfileVO profileVO) throws SpastructureProfileServiceException;
 
 	/**
 	 * Delete profile.

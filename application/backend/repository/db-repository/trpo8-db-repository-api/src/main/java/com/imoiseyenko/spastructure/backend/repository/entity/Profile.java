@@ -23,54 +23,54 @@ public class Profile {
 	private String email;
 
 	@Column(name = "FIRST_NAME")
-	private String firstName;
+	private String firstname;
 
 	@Column(name = "LAST_NAME")
-	private String lastName;
+	private String lastname;
 
 	@Column(name = "ADDRESS")
 	private String address;
 
-	public Profile() {
+	public Profile () {
 	}
 
-	public Long getId() {
+	public Long getId () {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId (Long id) {
 		this.id = id;
 	}
 
-	public String getEmail() {
+	public String getEmail () {
 		return email;
 	}
 
-	public void setEmail(String email) {
+	public void setEmail (String email) {
 		this.email = email;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getFirstname () {
+		return firstname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstname (String firstname) {
+		this.firstname = firstname;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getLastname () {
+		return lastname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastname (String lastname) {
+		this.lastname = lastname;
 	}
 
-	public String getAddress() {
+	public String getAddress () {
 		return address;
 	}
 
-	public void setAddress(String address) {
+	public void setAddress (String address) {
 		this.address = address;
 	}
 }

@@ -16,50 +16,50 @@ public class ProfileVO implements Serializable {
 
 	private Long id;
 	private String email;
-	private String firstName;
-	private String lastName;
+	private String firstname;
+	private String lastname;
 	private String address;
 
-	public ProfileVO() {
+	public ProfileVO () {
 	}
 
-	public Long getId() {
+	public Long getId () {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId (Long id) {
 		this.id = id;
 	}
 
-	public String getEmail() {
+	public String getEmail () {
 		return email;
 	}
 
-	public void setEmail(String email) {
+	public void setEmail (String email) {
 		this.email = email;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getFirstname () {
+		return firstname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstname (String firstname) {
+		this.firstname = firstname;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getLastname () {
+		return lastname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastname (String lastname) {
+		this.lastname = lastname;
 	}
 
-	public String getAddress() {
+	public String getAddress () {
 		return address;
 	}
 
-	public void setAddress(String address) {
+	public void setAddress (String address) {
 		this.address = address;
 	}
 }

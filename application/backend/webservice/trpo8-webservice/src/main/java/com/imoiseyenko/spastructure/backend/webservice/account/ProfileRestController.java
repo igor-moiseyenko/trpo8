@@ -1,6 +1,8 @@
 package com.imoiseyenko.spastructure.backend.webservice.account;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,10 +32,27 @@ public class ProfileRestController {
 	 * @author imoiseyenko93@gmail.com
 	 */
 	@RequestMapping(method = RequestMethod.GET)
-	public ProfileVO getProfile (@RequestHeader("token_data") String tokenData) throws SpastructureException {
+	public ProfileVO getProfile (@RequestHeader("access_token") String tokenData) throws SpastructureException {
 
 		TokenInfoVO tokenInfoVO = sessionService.verifySession(tokenData);
 
 		return profileService.getProfileByEmail(tokenInfoVO.getUsername());
+	}
+
+	/**
+	 * Update profile.
+	 * 
+	 * @param accessToken
+	 * @param profileVO
+	 * @throws SpastructureException
+	 * @author imoiseyenko93@gmail.com
+	 */
+	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public void updateProfile (@RequestHeader("access_token") String accessToken, @RequestBody ProfileVO profileVO)
+			throws SpastructureException {
+
+		TokenInfoVO tokenInfoVO = sessionService.verifySession(accessToken);
+
+		profileService.updateProfile(tokenInfoVO.getUsername(), profileVO);
 	}
 }

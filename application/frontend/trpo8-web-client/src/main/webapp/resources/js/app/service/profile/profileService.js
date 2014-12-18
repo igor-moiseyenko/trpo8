@@ -23,6 +23,11 @@ define(["angular", "app/repository/profile/profileRepository"], function (angula
 				}
 
 				return profileRepository.findProfile(tokenData, successHandler, errorHandler);
+			},
+
+			updateProfile: function (accessToken, profile, successHandler, errorHandler) {
+
+				return profileRepository.updateProfile(accessToken, profile, successHandler, errorHandler);
 			}
 		};
 	}]);
