@@ -1,0 +1,55 @@
+<div class="container">
+
+	<div class="col-xs-10">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<div class="collapse navbar-collapse" id="top-navigation">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="" ui-sref="register" ng-bind="'common.title' | translate"></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	
+	<div class="container">
+
+		<!-- Errors -->
+		<div class="row">
+			<div class="col-xs-8">
+				<error errors="errors"></error>
+			</div>
+		</div>
+	
+		<!-- Login form -->
+		<form class="form-horizontal" role="form">
+	
+			<!-- Email -->
+			<div class="form-group">
+				<label class="col-xs-2 control-label" ng-bind="'login.email' | translate" for="email"></label>
+				<div class="col-xs-4">
+					<input type="text" ng-model="model.email" class="form-control"
+						id="email" />
+				</div>
+			</div>
+	
+			<!-- Password -->
+			<div class="form-group">
+				<label class="col-xs-2 control-label" ng-bind="'login.password' | translate" for="password"></label>
+				<div class="col-xs-4">
+					<input type="text" ng-model="model.password" class="form-control"
+						id="password" />
+				</div>
+			</div>
+	
+			<!-- 'Login' button -->
+			<div class="form-group">
+				<div class="col-xs-offset-2 col-xs-4">
+					<button type="button" class="btn btn-default navbar-btn"
+						ng-bind="'login.login' | translate" ng-click="model.login()"></button>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+</div>

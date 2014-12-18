@@ -1,0 +1,44 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Mac files #
+.DS_store
+
+# Android files #
+
+*.apk
+*.dex
+*.ap_
+gen/
+
+# Database files #
+*.bak
+
+# Eclipse/Idea files #
+.project
+.metadata/
+.classpath
+.settings/
+target/
+bin/
+test-output/
+*.ldb
+.idea/
+*.iml
+*.ipr
+*.ids
+*.iws
+*.svn/
+*.log
+
+# Xcode build files #
+events/ios/viadeo-events/build/
+events/ios/viadeo-events/viadeo-events.xcodeproj/project.xcworkspace/xcuserdata/
+events/ios/space/build/
+events/ios/space/space.xcodeproj/project.xcworkspace/xcuserdata/
+
+events/ios/space/space.xcodeproj/xcuserdata/

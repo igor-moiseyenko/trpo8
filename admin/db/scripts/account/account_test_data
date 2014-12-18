@@ -1,0 +1,7 @@
+DELETE FROM `SPASTRUCTURE`.`ACCOUNT`;
+
+INSERT INTO `SPASTRUCTURE`.`ACCOUNT` (`ID`, `USERNAME`, `PASSWORD`)
+VALUES
+	(1, "username1", "password1"),
+	(2, "username2", "password2"),
+	(3, "username3", "password3");

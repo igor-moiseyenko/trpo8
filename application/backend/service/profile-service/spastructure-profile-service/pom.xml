@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.imoiseyenko.spastructure.backend.service</groupId>
+		<artifactId>profile-service</artifactId>
+		<version>1.0</version>
+	</parent>
+
+	<artifactId>spastructure-profile-service</artifactId>
+	<packaging>jar</packaging>
+
+	<name>spastructure-profile-service</name>
+
+	<dependencies>
+
+		<!-- Spastructure dependencies -->
+		<dependency>
+			<groupId>com.imoiseyenko.spastructure.backend.common</groupId>
+			<artifactId>spastructure-common-util</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.imoiseyenko.spastructure.backend.service</groupId>
+			<artifactId>spastructure-profile-service-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.imoiseyenko.spastructure.backend.repository</groupId>
+			<artifactId>spastructure-db-repository</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- Spring dependencies -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+
+	</dependencies>
+
+</project>
