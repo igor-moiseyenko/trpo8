@@ -7,8 +7,8 @@ import com.imoiseyenko.spastructure.backend.repository.entity.Profile;
 import com.imoiseyenko.spastructure.backend.service.profile.vo.ProfileVO;
 
 /**
- * Converter for the {@link ProfileVO} value object to the {@link Profile} entity instance and vice
- * versa.
+ * Converter for the {@link ProfileVO} value object to the {@link Profile}
+ * entity instance and vice versa.
  * 
  * @author imoiseyenko93@gmail.com
  * @version Apr 26, 2014
@@ -17,13 +17,14 @@ import com.imoiseyenko.spastructure.backend.service.profile.vo.ProfileVO;
 public class ProfileVOConverter {
 
 	/**
-	 * Convert {@link Profile} entity instance to the {@link ProfileVO} value object.
+	 * Convert {@link Profile} entity instance to the {@link ProfileVO} value
+	 * object.
 	 * 
 	 * @param profile
 	 * @return
 	 * @author imoiseyenko93@gmail.com
 	 */
-	public ProfileVO convertProfileToVO (Profile profile) {
+	public ProfileVO convertProfileToVO(Profile profile) {
 
 		ProfileVO profileVO = null;
 
@@ -32,20 +33,23 @@ public class ProfileVOConverter {
 			profileVO = new ProfileVO();
 			profileVO.setId(profile.getId());
 			profileVO.setEmail(profile.getEmail());
+			profileVO.setFirstName(profile.getFirstName());
+			profileVO.setLastName(profile.getLastName());
+			profileVO.setAddress(profile.getAddress());
 		}
 
 		return profileVO;
 	}
 
 	/**
-	 * Convert list of {@link Profile} entity instances to the list of {@link ProfileVO} value
-	 * objects.
+	 * Convert list of {@link Profile} entity instances to the list of
+	 * {@link ProfileVO} value objects.
 	 * 
 	 * @param profiles
 	 * @return
 	 * @author imoiseyenko93@gmail.com
 	 */
-	public List<ProfileVO> convertProfilesToVOs (List<Profile> profiles) {
+	public List<ProfileVO> convertProfilesToVOs(List<Profile> profiles) {
 
 		List<ProfileVO> profileVOs = new ArrayList<>();
 
@@ -59,13 +63,14 @@ public class ProfileVOConverter {
 	}
 
 	/**
-	 * Convert {@link ProfileVO} value object to the {@link Profile} entity instance.
+	 * Convert {@link ProfileVO} value object to the {@link Profile} entity
+	 * instance.
 	 * 
 	 * @param profileVO
 	 * @return
 	 * @author imoiseyenko93@gmail.com
 	 */
-	public Profile convertProfileVOToEntity (ProfileVO profileVO) {
+	public Profile convertProfileVOToEntity(ProfileVO profileVO) {
 
 		Profile profile = null;
 
@@ -74,20 +79,23 @@ public class ProfileVOConverter {
 			profile = new Profile();
 			profile.setId(profileVO.getId());
 			profile.setEmail(profileVO.getEmail());
+			profile.setFirstName(profileVO.getFirstName());
+			profile.setLastName(profileVO.getLastName());
+			profile.setAddress(profileVO.getAddress());
 		}
 
 		return profile;
 	}
 
 	/**
-	 * Convert list of {@link ProfileVO} value objects to the list of {@link Profile} entity
-	 * instances.
+	 * Convert list of {@link ProfileVO} value objects to the list of
+	 * {@link Profile} entity instances.
 	 * 
 	 * @param profileVOs
 	 * @return
 	 * @author imoiseyenko93@gmail.com
 	 */
-	public List<Profile> convertProfileVOsToEntities (List<ProfileVO> profileVOs) {
+	public List<Profile> convertProfileVOsToEntities(List<ProfileVO> profileVOs) {
 
 		List<Profile> profiles = new ArrayList<>();
 

@@ -1,1 +1,33 @@
-<div>Profile edit view.</div>
+<form class="form-horizontal" role="form">
+	
+	<!-- First name -->
+	<div class="form-group">
+		<label class="col-xs-4 control-label" ng-bind="'profile.firstname' | translate" for="firstname"></label>
+		<div class="col-xs-4">
+			<input id="firstname" type="text" class="form-control" placeholder="" ng-model="$parent.model.profile.firstname" />
+		</div>
+	</div>
+	
+	<!-- Last name -->
+	<div class="form-group">
+		<label class="col-xs-4 control-label" ng-bind="'profile.lastname' | translate" for="lastname"></label>
+		<div class="col-xs-4">
+			<input id="lastname" type="text" class="form-control" placeholder="" ng-model="$parent.model.profile.lastname" />
+		</div>
+	</div>
+	
+	<!-- Address -->
+	<div class="form-group">
+		<label class="col-xs-4 control-label" ng-bind="'profile.address' | translate" for="lastname"></label>
+		<div class="col-xs-4">
+			<input id="address" type="text" class="form-control" placeholder="" ng-model="$parent.model.profile.address" />
+		</div>
+	</div>
+	
+	<!-- Save button -->
+	<div class="form-group">
+		<div class="col-xs-offset-4 col-xs-4">
+			<button type="button" class="btn btn-default" ng-bind="'common.save' | translate" ng-click="model.updateProfile()"></button>
+		</div>
+	</div>
+</form>

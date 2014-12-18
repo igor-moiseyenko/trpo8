@@ -1,1 +1,43 @@
-Profile details.
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a ui-sref="app.main.profile.edit" role="button">Edit</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- Errors. -->
+<div class="row">
+	<div class="col-xs-10">
+		<error errors="errors"></error>
+	</div>
+</div>
+
+<div class="col-xs-10">
+
+	<!-- First name -->
+	<div class="row" ng-show="$parent.model.profile.firstname">
+		<label class="col-xs-offset-2 col-xs-4" ng-bind="'profile.firstname' | translate"></label>
+		<label class="col-xs-4" ng-bind="model.profile.firstname"></label>
+	</div>
+	
+	<!-- Last name -->
+	<div class="row" ng-show="$parent.model.profile.lastname">
+		<label class="col-xs-offset-2 col-xs-4" ng-bind="'profile.lastname' | translate"></label>
+		<label class="col-xs-4" ng-bind="$parent.model.profile.lastname"></label>
+	</div>
+	
+	<!-- Email -->
+	<div class="row" ng-show="$parent.model.profile.email">
+		<label class="col-xs-offset-2 col-xs-4" ng-bind="'profile.email' | translate"></label>
+		<label class="col-xs-4" ng-bind="$parent.model.profile.email"></label>
+	</div>
+	
+	<!-- Address -->
+	<div class="row" ng-show="$parent.model.profile.address">
+		<label class="col-xs-offset-2 col-xs-4" ng-bind="'profile.address' | translate"></label>
+		<label class="col-xs-4" ng-bind="$parent.model.profile.address"></label>
+	</div>
+</div>

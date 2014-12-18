@@ -15,6 +15,7 @@ define(["angular", "app/view/application"], function (angular, applicationModule
 			"common.next": "Next",
 			"common.back": "Back",
 			"common.title": "SPA Structure",
+			"common.save": "Save",
 
 			/** Login */
 			"login.email": "Email",
@@ -37,7 +38,13 @@ define(["angular", "app/view/application"], function (angular, applicationModule
 			"sidebar.my.friends": "My friends",
 			"sidebar.my.messages": "My messages",
 			"sidebar.my.communities": "My communities",
-			"sidebar.my.news": "My news"
+			"sidebar.my.news": "My news",
+
+			/** Profile */
+			"profile.firstname": "First name",
+			"profile.lastname": "Last name",
+			"profile.email": "Email",
+			"profile.address": "Address",
 		});
 	}]);
 });
