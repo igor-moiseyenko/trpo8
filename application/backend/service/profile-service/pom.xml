@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.imoiseyenko.spastructure.backend.service</groupId>
+		<groupId>com.imoiseyenko.trpo8.backend.service</groupId>
 		<artifactId>service</artifactId>
 		<version>1.0</version>
 	</parent>
@@ -17,8 +17,8 @@
 
 	<!-- Backend service modules -->
 	<modules>
-		<module>spastructure-profile-service-api</module>
-		<module>spastructure-profile-service</module>
+		<module>trpo8-profile-service-api</module>
+		<module>trpo8-profile-service</module>
 	</modules>
 
 </project>

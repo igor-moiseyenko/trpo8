@@ -6,19 +6,13 @@
 
 	<parent>
 		<groupId>com.imoiseyenko.trpo8.backend.repository</groupId>
-		<artifactId>repository</artifactId>
+		<artifactId>file-repository</artifactId>
 		<version>1.0</version>
 	</parent>
 
-	<artifactId>file-repository</artifactId>
-	<packaging>pom</packaging>
+	<artifactId>trpo8-file-repository</artifactId>
+	<packaging>jar</packaging>
 
-	<name>file-repository</name>
-
-	<!-- Backend repository modules -->
-	<modules>
-		<module>trpo8-file-repository-api</module>
-		<module>trpo8-file-repository</module>
-	</modules>
+	<name>trpo8-file-repository</name>
 
 </project>

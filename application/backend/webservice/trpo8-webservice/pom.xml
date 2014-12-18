@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.imoiseyenko.trpo8.backend.webservice</groupId>
+		<artifactId>webservice</artifactId>
+		<version>1.0</version>
+	</parent>
+
+	<artifactId>trpo8-webservice</artifactId>
+	<packaging>war</packaging>
+
+	<name>trpo8-webservice</name>
+
+	<build>
+		<finalName>trpo8-api</finalName>
+	</build>
+
+	<dependencies>
+
+		<!-- Spastructure common dependencies -->
+		<dependency>
+			<groupId>com.imoiseyenko.trpo8.backend.common</groupId>
+			<artifactId>trpo8-common-exception</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- Spastructure service API/service dependencies -->
+		<dependency>
+			<groupId>com.imoiseyenko.trpo8.backend.service</groupId>
+			<artifactId>trpo8-profile-service-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.imoiseyenko.trpo8.backend.service</groupId>
+			<artifactId>trpo8-profile-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- Servlet API -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+		</dependency>
+
+		<!-- Spring dependencies -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+
+		<!-- AspectJ -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+
+		<!-- Jackson JSON Mapper -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+
+	</dependencies>
+
+</project>

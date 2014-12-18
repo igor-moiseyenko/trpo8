@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.imoiseyenko.spastructure.backend</groupId>
+		<groupId>com.imoiseyenko.trpo8.backend</groupId>
 		<artifactId>backend</artifactId>
 		<version>1.0</version>
 	</parent>
 
-	<groupId>com.imoiseyenko.spastructure.backend.repository</groupId>
+	<groupId>com.imoiseyenko.trpo8.backend.repository</groupId>
 	<artifactId>repository</artifactId>
 	<packaging>pom</packaging>
 

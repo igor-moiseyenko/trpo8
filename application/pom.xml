@@ -4,12 +4,12 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.imoiseyenko.spastructure</groupId>
-	<artifactId>spastructure</artifactId>
+	<groupId>com.imoiseyenko.trpo8</groupId>
+	<artifactId>trpo8</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>
 
-	<name>spastructure</name>
+	<name>trpo8</name>
 
 	<properties>
 
@@ -33,9 +33,9 @@
         <!-- DB connection -->
         <mysql.url>jdbc:mysql://localhost:3306</mysql.url>
         <jdbc.driver>com.mysql.jdbc.Driver</jdbc.driver>
-		<jdbc.url>${mysql.url}/SPASTRUCTURE</jdbc.url>
-		<jdbc.username>spastructure</jdbc.username>
-		<jdbc.password>spastructure</jdbc.password>
+		<jdbc.url>${mysql.url}/TRPO8</jdbc.url>
+		<jdbc.username>trpo8</jdbc.username>
+		<jdbc.password>trpo8</jdbc.password>
 
 		<!-- Token config -->
         <token.expiration.time.delta>2592000000</token.expiration.time.delta>
