@@ -14,8 +14,14 @@
 <div class="panel panel-default" ng-repeat="mobileApp in model.mobileApps track by $index">
 	<div class="panel-heading">
 		<div class="title-right-button">
-			<button type="button" class="btn btn-default" ng-bind="'common.details' | translate"
-				ui-sref="app.main.mobileapp.details({ id: mobileApp.id })"></button>
+			<button type="button"
+				class="btn btn-default"
+				ui-sref="app.main.mobileapp.details({ id: mobileApp.id })"
+				ng-bind="'common.details' | translate"></button>
+			<button type="button"
+				class="btn btn-default"
+				ng-click="model.deleteMobileApp(mobileApp)"
+				ng-bind="'common.delete' | translate"></button>
 		</div>
 		<div class="panel-title" ng-bind="mobileApp.name"></div>
 	</div>

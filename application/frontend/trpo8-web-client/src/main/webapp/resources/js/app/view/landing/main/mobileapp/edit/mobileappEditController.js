@@ -27,7 +27,7 @@ define(["angular"], function (angular) {
 
 				$scope.model = {
 
-					mobileApp: mobileappService.getMobileAppById(lsService.getToken(), $stateParams.id, null, null),
+					mobileApp: {},
 
 					updateMobileApp: function () {
 
@@ -49,6 +49,8 @@ define(["angular"], function (angular) {
 					$scope.model.action = $scope.model.createMobileApp;
 				} else {
 					$scope.model.action = $scope.model.updateMobileApp;
+					$scope.model.mobileApp = mobileappService.getMobileAppById(lsService.getToken(), $stateParams.id,
+							null, null)
 				}
 			}];
 });

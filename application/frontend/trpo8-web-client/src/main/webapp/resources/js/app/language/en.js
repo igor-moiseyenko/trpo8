@@ -19,6 +19,7 @@ define(["angular", "app/view/application"], function (angular, applicationModule
 			"common.add": "Add",
 			"common.details": "Details",
 			"common.edit": "Edit",
+			"common.delete": "Delete",
 
 			/** Login */
 			"login.email": "Email",

@@ -73,7 +73,7 @@ define(["angular", "angular-resource"], function (angular, ngResource) {
 
 			deleteMobileAppById: function (accessToken, id, successHandler, errorHandler) {
 
-				var mobileAppResource = $resource(apiHost + "/api/v1/mobileapps/:id", {}, {
+				var mobileAppResource = $resource(apiHost + "/api/v1/mobileapps/:id", null, {
 					deleteMobileApp: {
 						method: "DELETE",
 						headers: {

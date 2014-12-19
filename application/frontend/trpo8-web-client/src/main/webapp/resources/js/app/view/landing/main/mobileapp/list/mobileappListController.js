@@ -3,11 +3,27 @@
  */
 define(["angular"], function (angular) {
 
-	return ["$scope", "lsService", "mobileappService", function ($scope, lsService, mobileappService) {
+	return ["$scope", "$state", "lsService", "mobileappService",
+			function ($scope, $state, lsService, mobileappService) {
 
-		$scope.model = {
+				var successHandler = function (data) {
+					console.log("lalala");
+				};
 
-			mobileApps: mobileappService.getAllMobileApps(lsService.getToken(), null, null)
-		};
-	}];
+				var errorHandler = function (error) {
+					console.log(error);
+				};
+
+				$scope.model = {
+
+					mobileApps: mobileappService.getAllMobileApps(lsService.getToken(), null, null),
+
+					deleteMobileApp: function (mobileApp) {
+
+						mobileappService.deleteMobileAppById(lsService.getToken(), mobileApp.id, function () {
+							$state.go("app.main.profile.details")
+						}, errorHandler);
+					}
+				};
+			}];
 });
