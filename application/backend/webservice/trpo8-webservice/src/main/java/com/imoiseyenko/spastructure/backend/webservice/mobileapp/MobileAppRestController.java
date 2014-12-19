@@ -30,6 +30,22 @@ public class MobileAppRestController {
 	private MobileAppService mobileAppService;
 
 	/**
+	 * Create mobile application.
+	 * 
+	 * @param accessToken
+	 * @param mobileAppVO
+	 * @throws SpastructureException
+	 * @author imoiseyenko93@gmail.com
+	 */
+	@RequestMapping(method = RequestMethod.PUT)
+	public void createMobileApp (@RequestHeader("access_token") String accessToken, @RequestBody MobileAppVO mobileAppVO)
+			throws SpastructureException {
+
+		sessionService.verifySession(accessToken);
+		mobileAppService.createMobileApp(mobileAppVO);
+	}
+
+	/**
 	 * Get mobile application with specified id.
 	 * 
 	 * @param accessToken

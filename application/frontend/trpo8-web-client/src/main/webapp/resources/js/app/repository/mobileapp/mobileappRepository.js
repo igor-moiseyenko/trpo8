@@ -11,6 +11,20 @@ define(["angular", "angular-resource"], function (angular, ngResource) {
 
 		return {
 
+			createMobileApp: function (accessToken, mobileApp, successHandler, errorHandler) {
+
+				var mobileAppResource = $resource(apiHost + "/api/v1/mobileapps", {}, {
+					updateMobileApp: {
+						method: "PUT",
+						headers: {
+							"access_token": accessToken
+						}
+					}
+				});
+
+				return mobileAppResource.updateMobileApp(mobileApp, successHandler, errorHandler);
+			},
+
 			findMobileAppById: function (accessToken, id, successHandler, errorHandler) {
 
 				var mobileAppResource = $resource(apiHost + "/api/v1/mobileapps/:id", {}, {

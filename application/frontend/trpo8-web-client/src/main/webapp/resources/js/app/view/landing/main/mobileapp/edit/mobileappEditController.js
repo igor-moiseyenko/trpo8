@@ -11,10 +11,14 @@ define(["angular"], function (angular) {
 			"mobileappService",
 			function ($scope, $state, $stateParams, lsService, mobileappService) {
 
-				var successHandler = function () {
+				var editSuccessHandler = function () {
 					$state.go("app.main.mobileapp.details", {
 						"id": $scope.model.mobileApp.id
 					});
+				};
+
+				var createSuccessHandler = function () {
+					$state.go("app.main.mobileapp.list");
 				};
 
 				var errorHandler = function (error) {
@@ -27,9 +31,24 @@ define(["angular"], function (angular) {
 
 					updateMobileApp: function () {
 
-						mobileappService.updateMobileApp(lsService.getToken(), $scope.model.mobileApp, successHandler,
-								errorHandler);
-					}
+						mobileappService.updateMobileApp(lsService.getToken(), $scope.model.mobileApp,
+								editSuccessHandler, errorHandler);
+					},
+
+					createMobileApp: function () {
+
+						mobileappService.createMobileApp(lsService.getToken(), $scope.model.mobileApp,
+								createSuccessHandler, errorHandler);
+					},
+
+					action: null
 				};
+
+				// Create OR Update
+				if ("new" === $stateParams.id) {
+					$scope.model.action = $scope.model.createMobileApp;
+				} else {
+					$scope.model.action = $scope.model.updateMobileApp;
+				}
 			}];
 });

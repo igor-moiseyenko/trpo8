@@ -9,6 +9,11 @@ define(["angular", "app/repository/mobileapp/mobileappRepository"], function (an
 
 		return {
 
+			createMobileApp: function (accessToken, mobileApp, successHandler, errorHandler) {
+
+				return mobileappRepository.updateMobileApp(accessToken, mobileApp, successHandler, errorHandler);
+			},
+
 			getMobileAppById: function (accessToken, id, successHandler, errorHandler) {
 
 				return mobileappRepository.findMobileAppById(accessToken, id, successHandler, errorHandler);

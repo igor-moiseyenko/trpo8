@@ -34,6 +34,24 @@ public class MobileAppServiceBean implements MobileAppService {
 	 * @author imoiseyenko93@gmail.com
 	 */
 	@Override
+	@Transactional(propagation = Propagation.REQUIRED, readOnly = false)
+	public void createMobileApp (MobileAppVO mobileAppVO) throws MobileAppServiceException {
+
+		try {
+
+			mobileAppDAO.create(mobileAppVOConverter.convertMobileAppVOToEntity(mobileAppVO));
+		} catch (SpastructureDBRepositoryException | RuntimeException ex) {
+			throw MobileAppServiceExceptionCreator.CANNOT_CREATE_MOBILE_APP.createException(ex);
+		}
+	}
+
+	/**
+	 * 
+	 * {@inheritDoc}
+	 * 
+	 * @author imoiseyenko93@gmail.com
+	 */
+	@Override
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public MobileAppVO getMobileAppById (Long id) throws MobileAppServiceException {
 

@@ -13,6 +13,15 @@ import com.imoiseyenko.spastructure.backend.service.mobileapp.vo.MobileAppVO;
 public interface MobileAppService {
 
 	/**
+	 * Create mobile application.
+	 * 
+	 * @param mobileAppVO
+	 * @throws MobileAppServiceException
+	 * @author imoiseyenko93@gmail.com
+	 */
+	public void createMobileApp (MobileAppVO mobileAppVO) throws MobileAppServiceException;
+
+	/**
 	 * Get mobile application with specified id.
 	 * 
 	 * @param id
