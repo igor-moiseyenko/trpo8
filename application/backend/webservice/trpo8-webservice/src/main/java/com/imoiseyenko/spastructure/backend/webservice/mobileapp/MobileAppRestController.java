@@ -3,6 +3,7 @@ package com.imoiseyenko.spastructure.backend.webservice.mobileapp;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -31,17 +32,17 @@ public class MobileAppRestController {
 	/**
 	 * Get mobile application with specified id.
 	 * 
-	 * @param tokenData
+	 * @param accessToken
 	 * @param id
 	 * @return
 	 * @throws SpastructureException
 	 * @author imoiseyenko93@gmail.com
 	 */
 	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
-	public MobileAppVO getMobileAppById (@RequestHeader("access_token") String tokenData, @PathVariable("id") Long id)
+	public MobileAppVO getMobileAppById (@RequestHeader("access_token") String accessToken, @PathVariable("id") Long id)
 			throws SpastructureException {
 
-		sessionService.verifySession(tokenData);
+		sessionService.verifySession(accessToken);
 
 		return mobileAppService.getMobileAppById(id);
 	}
@@ -49,17 +50,50 @@ public class MobileAppRestController {
 	/**
 	 * Get all mobile applications.
 	 * 
-	 * @param tokenData
+	 * @param accessToken
 	 * @return
 	 * @throws SpastructureException
 	 * @author imoiseyenko93@gmail.com
 	 */
 	@RequestMapping(method = RequestMethod.GET)
-	public List<MobileAppVO> getAllMobileApps (@RequestHeader("access_token") String tokenData)
+	public List<MobileAppVO> getAllMobileApps (@RequestHeader("access_token") String accessToken)
 			throws SpastructureException {
 
-		sessionService.verifySession(tokenData);
+		sessionService.verifySession(accessToken);
 
 		return mobileAppService.getAllMobileApps();
 	}
+
+	/**
+	 * Update mobile application.
+	 * 
+	 * @param accessToken
+	 * @param mobileAppVO
+	 * @throws SpastructureException
+	 * @author imoiseyenko93@gmail.com
+	 */
+	@RequestMapping(method = RequestMethod.POST)
+	public void updateMobileApp (@RequestHeader("access_token") String accessToken, @RequestBody MobileAppVO mobileAppVO)
+			throws SpastructureException {
+
+		sessionService.verifySession(accessToken);
+		mobileAppService.updateMobileApp(mobileAppVO);
+	}
+
+	/**
+	 * Delete mobile application with specified id.
+	 * 
+	 * @param accessToken
+	 * @param id
+	 * @throws SpastructureException
+	 * @author imoiseyenko93@gmail.com
+	 */
+	@RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
+	public void deleteMobileApp (@RequestHeader("access_token") String accessToken, @PathVariable("id") Long id)
+			throws SpastructureException {
+
+		sessionService.verifySession(accessToken);
+		mobileAppService.deleteMobileAppById(id);
+	}
+
 }

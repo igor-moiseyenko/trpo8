@@ -63,4 +63,40 @@ public class MobileAppServiceBean implements MobileAppService {
 		}
 	}
 
+	/**
+	 * 
+	 * {@inheritDoc}
+	 * 
+	 * @author imoiseyenko93@gmail.com
+	 */
+	@Override
+	@Transactional(propagation = Propagation.REQUIRED, readOnly = false)
+	public void updateMobileApp (MobileAppVO mobileAppVO) throws MobileAppServiceException {
+
+		try {
+
+			mobileAppDAO.update(mobileAppVOConverter.convertMobileAppVOToEntity(mobileAppVO));
+		} catch (SpastructureDBRepositoryException | RuntimeException ex) {
+			throw MobileAppServiceExceptionCreator.CANNOT_UPDATE_MOBILE_APP.createException(ex);
+		}
+	}
+
+	/**
+	 * 
+	 * {@inheritDoc}
+	 * 
+	 * @author imoiseyenko93@gmail.com
+	 */
+	@Override
+	@Transactional(propagation = Propagation.REQUIRED, readOnly = false)
+	public void deleteMobileAppById (Long id) throws MobileAppServiceException {
+
+		try {
+
+			mobileAppDAO.deleteById(id);
+		} catch (SpastructureDBRepositoryException | RuntimeException ex) {
+			throw MobileAppServiceExceptionCreator.CANNOT_DELETE_MOBILE_APP.createException(ex);
+		}
+	}
+
 }

@@ -41,6 +41,37 @@ define(["angular", "angular-resource"], function (angular, ngResource) {
 				});
 
 				return mobileAppResource.findAllMobileApps(successHandler, errorHandler);
+			},
+
+			updateMobileApp: function (accessToken, mobileApp, successHandler, errorHandler) {
+
+				var mobileAppResource = $resource(apiHost + "/api/v1/mobileapps", {}, {
+					updateMobileApp: {
+						method: "POST",
+						headers: {
+							"access_token": accessToken
+						}
+					}
+				});
+
+				return mobileAppResource.updateMobileApp(mobileApp, successHandler, errorHandler);
+			},
+
+			deleteMobileAppById: function (accessToken, id, successHandler, errorHandler) {
+
+				var mobileAppResource = $resource(apiHost + "/api/v1/mobileapps/:id", {}, {
+					deleteMobileApp: {
+						method: "DELETE",
+						headers: {
+							"access_token": accessToken
+						},
+						params: {
+							"id": id
+						}
+					}
+				});
+
+				return mobileAppResource.deleteMobileApp(successHandler, errorHandler);
 			}
 		};
 	}]);

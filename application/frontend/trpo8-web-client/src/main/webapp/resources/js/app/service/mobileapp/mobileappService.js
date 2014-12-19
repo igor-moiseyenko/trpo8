@@ -17,6 +17,16 @@ define(["angular", "app/repository/mobileapp/mobileappRepository"], function (an
 			getAllMobileApps: function (accessToken, successHandler, errorHandler) {
 
 				return mobileappRepository.findAllMobileApps(accessToken, successHandler, errorHandler);
+			},
+
+			updateMobileApp: function (accessToken, mobileApp, successHandler, errorHandler) {
+
+				return mobileappRepository.updateMobileApp(accessToken, mobileApp, successHandler, errorHandler);
+			},
+
+			deleteMobileAppById: function (accessToken, id, successHandler, errorHandler) {
+
+				return mobileappRepository.deleteMobileAppById(accessToken, id, successHandler, errorHandler);
 			}
 		};
 	}]);

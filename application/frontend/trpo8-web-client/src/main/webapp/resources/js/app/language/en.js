@@ -14,7 +14,7 @@ define(["angular", "app/view/application"], function (angular, applicationModule
 			"common.cancel": "Cancel",
 			"common.next": "Next",
 			"common.back": "Back",
-			"common.title": "SPA Structure",
+			"common.title": "Mobile App Store",
 			"common.save": "Save",
 			"common.add": "Add",
 			"common.details": "Details",

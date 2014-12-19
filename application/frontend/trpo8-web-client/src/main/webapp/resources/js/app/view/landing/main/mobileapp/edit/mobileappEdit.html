@@ -1,0 +1,55 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="collapse navbar-collapse">
+			<form class="navbar-form navbar-right">
+				<button type="button"
+						class="btn btn-default"
+						ng-bind="'common.save' | translate"
+						ng-click="model.updateMobileApp()"></button>
+			</form>
+		</div>
+	</div>
+</nav>
+
+<form class="form-horizontal" role="form">
+	
+	<!-- Name -->
+	<div class="form-group">
+		<label class="col-xs-4 control-label" ng-bind="'mobile.app.name' | translate" for="name"></label>
+		<div class="col-xs-4">
+			<input id="name" type="text" class="form-control" placeholder="" ng-model="model.mobileApp.name" />
+		</div>
+	</div>
+	
+	<!-- Price -->
+	<div class="form-group">
+		<label class="col-xs-4 control-label" ng-bind="'mobile.app.price' | translate" for="price"></label>
+		<div class="col-xs-4">
+			<input id="price" type="text" class="form-control" placeholder="" ng-model="model.mobileApp.price" />
+		</div>
+	</div>
+	
+	<!-- Type -->
+	<div class="form-group">
+		<label class="col-xs-4 control-label" ng-bind="'mobile.app.type' | translate" for="type"></label>
+		<div class="col-xs-4">
+			<input id="type" type="text" class="form-control" placeholder="" ng-model="model.mobileApp.type" />
+		</div>
+	</div>
+	
+	<!-- Rating -->
+	<div class="form-group">
+		<label class="col-xs-4 control-label" ng-bind="'mobile.app.raiting' | translate" for="raiting"></label>
+		<div class="col-xs-4">
+			<input id="raiting" type="text" class="form-control" placeholder="" ng-model="model.mobileApp.raiting" />
+		</div>
+	</div>
+	
+	<!-- Description -->
+	<div class="form-group">
+		<label class="col-xs-4 control-label" ng-bind="'mobile.app.name' | translate" for="description"></label>
+		<div class="col-xs-4">
+			<input id="description" type="text" class="form-control" placeholder="" ng-model="model.mobileApp.description" />
+		</div>
+	</div>
+</form>

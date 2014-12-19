@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.stereotype.Component;
 import com.imoiseyenko.spastructure.backend.repository.entity.MobileApp;
+import com.imoiseyenko.spastructure.backend.repository.entity.MobileAppType;
 import com.imoiseyenko.spastructure.backend.service.mobileapp.vo.MobileAppVO;
 
 /**
@@ -45,4 +46,22 @@ public class MobileAppVOConverter {
 
 		return mobileAppVOs;
 	}
+
+	public MobileApp convertMobileAppVOToEntity (MobileAppVO mobileAppVO) {
+
+		MobileApp mobileApp = new MobileApp();
+
+		if (mobileAppVO != null) {
+
+			mobileApp.setId(mobileAppVO.getId());
+			mobileApp.setName(mobileAppVO.getName());
+			mobileApp.setPrice(mobileAppVO.getPrice());
+			mobileApp.setMobileAppType(MobileAppType.valueOf(mobileAppVO.getType()));
+			mobileApp.setRaiting(mobileAppVO.getRaiting());
+			mobileApp.setDescription(mobileAppVO.getDescription());
+		}
+
+		return mobileApp;
+	}
+
 }

@@ -30,4 +30,22 @@ public interface MobileAppService {
 	 * @author imoiseyenko93@gmail.com
 	 */
 	public List<MobileAppVO> getAllMobileApps () throws MobileAppServiceException;
+
+	/**
+	 * Update mobile application.
+	 * 
+	 * @param mobileAppVO
+	 * @throws MobileAppServiceException
+	 * @author imoiseyenko93@gmail.com
+	 */
+	public void updateMobileApp (MobileAppVO mobileAppVO) throws MobileAppServiceException;
+
+	/**
+	 * Delete mobile application with specified id.
+	 * 
+	 * @param id
+	 * @throws MobileAppServiceException
+	 * @author imoiseyenko93@gmail.com
+	 */
+	public void deleteMobileAppById (Long id) throws MobileAppServiceException;
 }

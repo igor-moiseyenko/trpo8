@@ -17,6 +17,8 @@ public enum MobileAppServiceExceptionCreator implements SpastructureExceptionCre
 
 	CANNOT_GET_ALL_MOBILE_APPS("TRPO8-3000", "Cannot get all mobile apps."),
 	CANNOT_GET_MOBILE_APP_BY_ID("TRPO8-3001", "Cannot get mobile app with specified id."),
+	CANNOT_UPDATE_MOBILE_APP("TRPO8-3002", "Cannot update mobile application."),
+	CANNOT_DELETE_MOBILE_APP("TRPO8-3003", "Cannot delete mobile application."),
 	;
 
 	private SpastructureExceptionDefinition exceptionDefinition;
