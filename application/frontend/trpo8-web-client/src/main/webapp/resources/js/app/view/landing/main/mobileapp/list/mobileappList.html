@@ -1,0 +1,21 @@
+<div class="panel panel-default" ng-repeat="mobileApp in model.mobileApps track by $index">
+	<div class="panel-heading">
+		<div class="title-right-button">
+			<button type="button" class="btn btn-default" ng-bind="'common.details' | translate"></button>
+		</div>
+		<div class="title-right-button">
+			<button type="button" class="btn btn-default" ng-bind="'common.add' | translate"></button>
+		</div>
+		<div class="panel-title" ng-bind="mobileApp.name"></div>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<label class="col-xs-1" ng-bind="'mobile.app.price' | translate"></label>
+			<label class="col-xs-2" ng-bind="mobileApp.price + ' $'"></label>
+		</div>
+		<div class="row">
+			<label class="col-xs-1" ng-bind="'mobile.app.raiting' | translate"></label>
+			<label class="col-xs-2" ng-bind="mobileApp.raiting"></label>
+		</div>
+	</div>
+</div>

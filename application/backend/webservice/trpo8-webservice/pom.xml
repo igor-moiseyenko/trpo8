@@ -38,6 +38,16 @@
 			<artifactId>trpo8-profile-service</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.imoiseyenko.trpo8.backend.service</groupId>
+			<artifactId>trpo8-mobile-app-service-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.imoiseyenko.trpo8.backend.service</groupId>
+			<artifactId>trpo8-mobile-app-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 
 		<!-- Servlet API -->
 		<dependency>

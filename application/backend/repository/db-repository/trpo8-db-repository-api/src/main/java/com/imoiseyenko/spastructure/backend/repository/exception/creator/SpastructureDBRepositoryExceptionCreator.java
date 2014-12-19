@@ -24,7 +24,10 @@ public enum SpastructureDBRepositoryExceptionCreator implements SpastructureExce
 	CANNOT_FIND_PROFILE_BY_EMAIL("SPA-1100", "Cannot find profile by email."),
 
 	/** 1200-1299 codes for token DAO exceptions. */
-	CANNOT_FIND_SESSION_BY_ACCESS_TOKEN("SPA-1200", "Canot session by access token."),
+	CANNOT_FIND_SESSION_BY_ACCESS_TOKEN("SPA-1200", "Cannot find session by access token."),
+	
+	/** 1300-1399 codes for mobile app DAO exceptions. */
+	CANNOT_FIND_ALL_MOBILE_APPS("SPA-1300", "Cannot find all mobile applications."),
 
 	;
 

@@ -11,6 +11,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css" type="text/css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" type="text/css" />
 		
 		<script src="${pageContext.request.contextPath}/resources/js/lib/require.js" data-main="${pageContext.request.contextPath}/resources/js/config/require.config.js" type="text/javascript"></script>
 	</head>
