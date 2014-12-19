@@ -1,0 +1,52 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="collapse navbar-collapse">
+			<form class="navbar-form navbar-right">
+				<button type="button"
+						class="btn btn-default"
+						ui-sref="app.main.mobileapp.edit"
+						ng-bind="'common.edit' | translate"></button>
+			</form>
+		</div>
+	</div>
+</nav>
+
+<!-- Errors. -->
+<div class="row">
+	<div class="col-xs-10">
+		<error errors="errors"></error>
+	</div>
+</div>
+
+<div class="col-xs-10">
+
+	<!-- Name -->
+	<div class="row" ng-show="model.mobileApp.name">
+		<label class="col-xs-offset-2 col-xs-4" ng-bind="'mobile.app.name' | translate"></label>
+		<label class="col-xs-4" ng-bind="model.mobileApp.name"></label>
+	</div>
+	
+	<!-- Price -->
+	<div class="row" ng-show="model.mobilApp.price">
+		<label class="col-xs-offset-2 col-xs-4" ng-bind="'mobile.app.price' | translate"></label>
+		<label class="col-xs-4" ng-bind="model.mobileApp.price"></label>
+	</div>
+	
+	<!-- Type -->
+	<div class="row" ng-show="model.mobileApp.type">
+		<label class="col-xs-offset-2 col-xs-4" ng-bind="'mobile.app.type' | translate"></label>
+		<label class="col-xs-4" ng-bind="model.mobileApp.type"></label>
+	</div>
+	
+	<!-- Rating -->
+	<div class="row" ng-show="model.mobileApp.raiting">
+		<label class="col-xs-offset-2 col-xs-4" ng-bind="'mobile.app.raiting' | translate"></label>
+		<label class="col-xs-4" ng-bind="model.mobileApp.raiting"></label>
+	</div>
+	
+	<!-- Description -->
+	<div class="row" ng-show="model.mobileApp.description">
+		<label class="col-xs-offset-2 col-xs-4" ng-bind="'mobile.app.description' | translate"></label>
+		<label class="col-xs-4" ng-bind="model.mobileApp.description"></label>
+	</div>
+</div>

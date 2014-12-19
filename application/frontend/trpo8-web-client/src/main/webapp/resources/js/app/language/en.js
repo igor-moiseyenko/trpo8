@@ -18,6 +18,7 @@ define(["angular", "app/view/application"], function (angular, applicationModule
 			"common.save": "Save",
 			"common.add": "Add",
 			"common.details": "Details",
+			"common.edit": "Edit",
 
 			/** Login */
 			"login.email": "Email",
@@ -49,7 +50,7 @@ define(["angular", "app/view/application"], function (angular, applicationModule
 			"mobile.app.name": "Name",
 			"mobile.app.price": "Price",
 			"mobile.app.type": "Type",
-			"mobile.app.raiting": "Raiting",
+			"mobile.app.raiting": "Rating",
 			"mobile.app.description": "Description"
 		});
 	}]);

@@ -13,6 +13,16 @@ import com.imoiseyenko.spastructure.backend.service.mobileapp.vo.MobileAppVO;
 public interface MobileAppService {
 
 	/**
+	 * Get mobile application with specified id.
+	 * 
+	 * @param id
+	 * @return
+	 * @throws MobileAppServiceException
+	 * @author imoiseyenko93@gmail.com
+	 */
+	public MobileAppVO getMobileAppById (Long id) throws MobileAppServiceException;
+
+	/**
 	 * Get list of mobile applications.
 	 * 
 	 * @return

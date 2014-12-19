@@ -16,6 +16,7 @@ public enum MobileAppServiceExceptionCreator implements SpastructureExceptionCre
 	/** 3000-3999 codes for mobile app service exceptions. */
 
 	CANNOT_GET_ALL_MOBILE_APPS("TRPO8-3000", "Cannot get all mobile apps."),
+	CANNOT_GET_MOBILE_APP_BY_ID("TRPO8-3001", "Cannot get mobile app with specified id."),
 	;
 
 	private SpastructureExceptionDefinition exceptionDefinition;

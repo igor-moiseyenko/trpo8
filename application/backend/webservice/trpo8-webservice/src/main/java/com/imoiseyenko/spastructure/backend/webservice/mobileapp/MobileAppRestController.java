@@ -2,6 +2,7 @@ package com.imoiseyenko.spastructure.backend.webservice.mobileapp;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,6 +27,24 @@ public class MobileAppRestController {
 
 	@Autowired
 	private MobileAppService mobileAppService;
+
+	/**
+	 * Get mobile application with specified id.
+	 * 
+	 * @param tokenData
+	 * @param id
+	 * @return
+	 * @throws SpastructureException
+	 * @author imoiseyenko93@gmail.com
+	 */
+	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
+	public MobileAppVO getMobileAppById (@RequestHeader("access_token") String tokenData, @PathVariable("id") Long id)
+			throws SpastructureException {
+
+		sessionService.verifySession(tokenData);
+
+		return mobileAppService.getMobileAppById(id);
+	}
 
 	/**
 	 * Get all mobile applications.

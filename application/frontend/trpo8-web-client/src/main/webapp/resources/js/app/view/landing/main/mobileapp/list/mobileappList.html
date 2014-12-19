@@ -1,7 +1,8 @@
 <div class="panel panel-default" ng-repeat="mobileApp in model.mobileApps track by $index">
 	<div class="panel-heading">
 		<div class="title-right-button">
-			<button type="button" class="btn btn-default" ng-bind="'common.details' | translate"></button>
+			<button type="button" class="btn btn-default" ng-bind="'common.details' | translate"
+				ui-sref="app.main.mobileapp.details({ id: mobileApp.id })"></button>
 		</div>
 		<div class="title-right-button">
 			<button type="button" class="btn btn-default" ng-bind="'common.add' | translate"></button>
