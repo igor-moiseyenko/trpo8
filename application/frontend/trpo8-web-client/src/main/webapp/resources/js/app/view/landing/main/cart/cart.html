@@ -1,0 +1,68 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="collapse navbar-collapse">
+		
+			<p class="navbar-text" ng-bind="'cart.my' | translate"></p>
+		
+			<form class="navbar-form navbar-right">
+				<button type="button"
+						class="btn btn-default"
+						ng-click="model.order()"
+						ng-bind="'cart.order' | translate"></button>
+			</form>
+		</div>
+	</div>
+</nav>
+
+<!-- Errors. -->
+<div class="row">
+	<div class="col-xs-10">
+		<error errors="errors"></error>
+	</div>
+</div>
+
+<div class="panel panel-default" ng-repeat="item in model.cart.items track by $index">
+	<div class="panel-heading">
+		<div class="title-right-button">
+			<button type="button"
+				class="btn btn-default"
+				ui-sref="app.main.mobileapp.details({ id: item.mobileApp.id })"
+				ng-bind="'common.details' | translate"></button>
+			<button type="button"
+				class="btn btn-default"
+				ng-click="model.deleteFromCart(item)"
+				ng-bind="'common.delete' | translate"></button>
+		</div>
+		<div class="panel-title" ng-bind="item.mobileApp.name"></div>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<label class="col-xs-2" ng-bind="'mobile.app.price' | translate"></label>
+			<label class="col-xs-2" ng-bind="item.mobileApp.price + ' $'"></label>
+		</div>
+		<div class="row">
+			<label class="col-xs-2" ng-bind="'mobile.app.raiting' | translate"></label>
+			<label class="col-xs-2" ng-bind="item.mobileApp.raiting"></label>
+		</div>
+		<div class="row">
+			<label class="col-xs-2" ng-bind="'cart.item.quantity' | translate"></label>
+			<label class="col-xs-2" ng-bind="item.quantity"></label>
+		</div>
+		<div class="row">
+			<label class="col-xs-2" ng-bind="'cart.item.total' | translate"></label>
+			<label class="col-xs-2" ng-bind="item.total + ' $'"></label>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title" ng-bind="'cart.total' | translate"></div>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<label class="col-xs-2" ng-bind="'cart.total' | translate"></label>
+			<label class="col-xs-2" ng-bind="model.cart.total + ' $'"></label>
+		</div>
+	</div>
+</div>

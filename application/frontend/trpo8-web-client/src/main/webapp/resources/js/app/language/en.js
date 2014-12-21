@@ -40,6 +40,7 @@ define(["angular", "app/view/application"], function (angular, applicationModule
 			/** Sidebar */
 			"sidebar.my.profile": "My profile",
 			"sidebar.mobileapps": "Mobile Apps",
+			"sidebar.cart": "My cart",
 
 			/** Profile */
 			"profile.firstname": "First name",
@@ -52,7 +53,26 @@ define(["angular", "app/view/application"], function (angular, applicationModule
 			"mobile.app.price": "Price",
 			"mobile.app.type": "Type",
 			"mobile.app.raiting": "Rating",
-			"mobile.app.description": "Description"
+			"mobile.app.description": "Description",
+
+			/** Mobile app list */
+			"mobileapp.list.mobile.apps": "Applications",
+
+			/** Mobile app details */
+			"mobileapp.details.add.to.cart": "Add to cart",
+
+			/** Profile details */
+			"profile.details.my": "My profile details",
+
+			/** Profile edit */
+			"profile.edit.my": "My profile edition",
+
+			/** Cart */
+			"cart.my": "My cart",
+			"cart.order": "Order",
+			"cart.item.quantity": "Quantity",
+			"cart.item.total": "Item total",
+			"cart.total": "Total"
 		});
 	}]);
 });
