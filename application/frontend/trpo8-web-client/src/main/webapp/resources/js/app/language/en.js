@@ -41,6 +41,7 @@ define(["angular", "app/view/application"], function (angular, applicationModule
 			"sidebar.my.profile": "My profile",
 			"sidebar.mobileapps": "Mobile Apps",
 			"sidebar.cart": "My cart",
+			"sidebar.orders": "Orders",
 
 			/** Profile */
 			"profile.firstname": "First name",
@@ -72,7 +73,17 @@ define(["angular", "app/view/application"], function (angular, applicationModule
 			"cart.order": "Order",
 			"cart.item.quantity": "Quantity",
 			"cart.item.total": "Item total",
-			"cart.total": "Total"
+			"cart.total": "Total",
+
+			/** Order */
+			"order.orders": "Orders",
+
+			/** Order list */
+			"order.list.item.name": "Item name",
+			"order.list.item.quantity": "Quantity",
+
+			/** Order details */
+			"order.details.order": "Order"
 		});
 	}]);
 });

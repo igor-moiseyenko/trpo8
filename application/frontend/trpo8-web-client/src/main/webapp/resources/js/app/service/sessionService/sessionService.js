@@ -65,6 +65,12 @@ define(["angular"], function (angular) {
 				return cart;
 			},
 
+			cleanCart: function () {
+
+				cart.items = [];
+				cart.total = 0;
+			},
+
 			addMobileAppToCart: function (mobileApp) {
 
 				cart.addMobileApp(mobileApp);

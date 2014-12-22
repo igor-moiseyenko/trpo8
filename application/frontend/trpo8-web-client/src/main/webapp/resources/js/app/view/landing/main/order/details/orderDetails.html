@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="collapse navbar-collapse">
+			<p class="navbar-text" ng-bind="'order.details.order' | translate"></p>
+		</div>
+	</div>
+</nav>
+
+<div class="panel panel-default" ng-repeat="orderItem in model.order.orderItemVOs track by $index">
+	<div class="panel-heading">
+		<div class="panel-title" ng-bind="orderItem.mobileAppVO.name"></div>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<label class="col-xs-2" ng-bind="'mobile.app.price' | translate"></label>
+			<label class="col-xs-2" ng-bind="orderItem.mobileAppVO.price + ' $'"></label>
+		</div>
+		<div class="row">
+			<label class="col-xs-2" ng-bind="'mobile.app.raiting' | translate"></label>
+			<label class="col-xs-2" ng-bind="orderItem.mobileAppVO.raiting"></label>
+		</div>
+		<div class="row">
+			<label class="col-xs-2" ng-bind="'cart.item.quantity' | translate"></label>
+			<label class="col-xs-2" ng-bind="orderItem.quantity"></label>
+		</div>
+	</div>
+</div>

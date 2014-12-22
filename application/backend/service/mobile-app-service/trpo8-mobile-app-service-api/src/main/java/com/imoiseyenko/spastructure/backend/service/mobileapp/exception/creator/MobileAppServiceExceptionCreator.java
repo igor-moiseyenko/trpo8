@@ -20,6 +20,10 @@ public enum MobileAppServiceExceptionCreator implements SpastructureExceptionCre
 	CANNOT_UPDATE_MOBILE_APP("TRPO8-3002", "Cannot update mobile application."),
 	CANNOT_DELETE_MOBILE_APP("TRPO8-3003", "Cannot delete mobile application."),
 	CANNOT_CREATE_MOBILE_APP("TRPO8-3004", "Cannot create mobile application."),
+	
+	CANNOT_CREATE_ORDER("TRPO8-3100", "Cannot create order."),
+	CANNOT_GET_ORDER("TRPO8-3101", "Cannot get order."),
+	CANNOT_GET_ORDERS_BY_ACCOUNT_ID("TRPO8-3102", "Cannot get orders with specified account id."),
 	;
 
 	private SpastructureExceptionDefinition exceptionDefinition;

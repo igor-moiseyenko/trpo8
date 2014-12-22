@@ -56,7 +56,8 @@ public class MobileAppVOConverter {
 			mobileApp.setId(mobileAppVO.getId());
 			mobileApp.setName(mobileAppVO.getName());
 			mobileApp.setPrice(mobileAppVO.getPrice());
-			mobileApp.setMobileAppType(MobileAppType.valueOf(mobileAppVO.getType()));
+			mobileApp.setMobileAppType((mobileAppVO.getType() != null) ? MobileAppType.valueOf(mobileAppVO.getType())
+					: null);
 			mobileApp.setRaiting(mobileAppVO.getRaiting());
 			mobileApp.setDescription(mobileAppVO.getDescription());
 		}

@@ -28,6 +28,10 @@ public enum SpastructureDBRepositoryExceptionCreator implements SpastructureExce
 	
 	/** 1300-1399 codes for mobile app DAO exceptions. */
 	CANNOT_FIND_ALL_MOBILE_APPS("SPA-1300", "Cannot find all mobile applications."),
+	
+	/** 1400-1499 codes for order DAO exceptions. */
+	CANNOT_FIND_ALL_ORDERS("SPA-1400", "Cannot find all orders."),
+	CANNOT_FIND_ORDERS_BY_ACCOUNT_ID("SPA", "Cannot find orders with specified account id.")
 
 	;
 

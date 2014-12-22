@@ -4,13 +4,14 @@
  * @author imoiseyenko93@gmail.com
  */
 define(["angular", "text!app/view/landing/main/main.html", "app/view/landing/main/profile/profile",
-		"app/view/landing/main/mobileapp/mobileapp", "app/view/landing/main/cart/cart"], function (angular,
-		mainTemplate, profileModule, mobileappModule, cartModule) {
+		"app/view/landing/main/mobileapp/mobileapp", "app/view/landing/main/cart/cart",
+		"app/view/landing/main/order/order"], function (angular, mainTemplate, profileModule, mobileappModule,
+		cartModule, orderModule) {
 
-	var mainModule = angular.module("mainModule", ["profileModule", "mobileappModule", "cartModule"]);
+	var mainModule = angular.module("mainModule", ["profileModule", "mobileappModule", "cartModule", "orderModule"]);
 
-	mainModule.config(["$stateProvider", "profileView", "mobileappView", "cartView",
-			function ($stateProvider, profileView, mobileappView, cartView) {
+	mainModule.config(["$stateProvider", "profileView", "mobileappView", "cartView", "orderView",
+			function ($stateProvider, profileView, mobileappView, cartView, orderView) {
 
 				$stateProvider.state("app.main.profile", {
 					url: "/profile",
@@ -26,6 +27,11 @@ define(["angular", "text!app/view/landing/main/main.html", "app/view/landing/mai
 					url: "/cart",
 					views: {
 						"": cartView
+					}
+				}).state("app.main.order", {
+					url: "/order",
+					views: {
+						"": orderView
 					}
 				});
 			}]);
